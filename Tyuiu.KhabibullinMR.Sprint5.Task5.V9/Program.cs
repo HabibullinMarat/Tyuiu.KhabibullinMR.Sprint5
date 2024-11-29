@@ -11,7 +11,7 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task5.V9
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         ");
             Console.WriteLine("***************************************************************************");
 
-            string path = $@"{Path.GetTempPath()}InPutDataFileTask4V30.txt";
+            string path = $@"{Path.GetTempPath()}InPutDataFileTask5V9.txt";
 
             Console.WriteLine("Данные находятся в файлй: " + path);
 

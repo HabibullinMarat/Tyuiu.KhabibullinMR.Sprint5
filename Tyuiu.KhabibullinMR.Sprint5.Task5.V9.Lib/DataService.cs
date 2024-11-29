@@ -7,7 +7,7 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task5.V9.Lib
         public double LoadFromDataFile(string path)
         {
             string strX = File.ReadAllText(path);
-            string[] s = strX.Split(',');
+            string[] s = strX.Split(' ');
             for (int i = 0; i < s.Length; i++)
             {
                 s[i] = s[i].Replace(".", ",");
