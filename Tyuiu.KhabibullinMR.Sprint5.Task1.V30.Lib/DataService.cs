@@ -16,18 +16,35 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task1.V30.Lib
                 File.Delete(path);
             }
 
+            double y;
+            string strY;
             for (int i = startValue; i <= stopValue; i++)
             {
-                double y = Math.Round(Math.Cos(i) + Math.Sin(i) / (2 - 2 * i) - 4 * i, 3);
-                string strY = Convert.ToString(y);
-
-                if (i != stopValue)
+                if (2 - 2 * i == 0)
                 {
-                    File.AppendAllText(path, strY + Environment.NewLine);
+                    y = 0;
+                    strY = Convert.ToString(y);
+                    if (i != stopValue)
+                    {
+                        File.AppendAllText(path, strY + Environment.NewLine);
+                    }
+                    else
+                    {
+                        File.AppendAllText(path, strY);
+                    }
                 }
                 else
                 {
-                    File.AppendAllText(path, strY);
+                    y = Math.Round(Math.Cos(i) + Math.Sin(i) / (2 - 2 * i) - 4 * i, 3);
+                    strY = Convert.ToString(y);
+                    if (i != stopValue)
+                    {
+                        File.AppendAllText(path, strY + Environment.NewLine);
+                    }
+                    else
+                    {
+                        File.AppendAllText(path, strY);
+                    }
                 }
             }
             return path;
