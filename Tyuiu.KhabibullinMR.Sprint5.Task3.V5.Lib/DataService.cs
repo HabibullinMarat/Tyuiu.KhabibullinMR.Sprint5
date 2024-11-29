@@ -1,4 +1,6 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint5;
+using System.IO;
+using System.Text;
 
 namespace Tyuiu.KhabibullinMR.Sprint5.Task3.V5.Lib
 {
@@ -10,7 +12,7 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task3.V5.Lib
 
             double y = Math.Round(2 * Math.Pow(x, 3) + (1 / 2) * Math.Pow(x, 2) - 3.5 * x + 2, 3);
 
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), System.Text.Encoding.UTF8))
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
                 writer.Write(BitConverter.GetBytes(x));
             }
