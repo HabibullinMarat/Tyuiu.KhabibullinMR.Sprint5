@@ -16,7 +16,13 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task5.V9.Lib
             double[] dS = new double[s.Length];
             for (int i = 0; i < s.Length; i++)
             {
-                dS[i] = Convert.ToDouble(s[i]);
+                int il = 0;
+                bool rew = int.TryParse(s[i],out il);
+                if (rew)
+                {
+                    dS[i] = Convert.ToDouble(s[i]);
+                }
+                
             }
             double max = dS.Max();
 
