@@ -35,7 +35,7 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task1.V30.Lib
                 }
                 else
                 {
-                    y = Math.Round(Math.Cos(i) + Math.Sin(i) / (2 - 2 * i) - 4 * i, 3);
+                    y = Math.Round(Math.Cos(i) + Math.Sin(i) / (2 - 2 * i) - 4 * i, 2);
                     strY = Convert.ToString(y);
                     if (i != stopValue)
                     {
