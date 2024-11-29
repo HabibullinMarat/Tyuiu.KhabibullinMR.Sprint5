@@ -10,7 +10,7 @@ namespace Tyuiu.KhabibullinMR.Sprint5.Task3.V5.Lib
         {
             string path = $@"{Path.GetTempPath()}OutPutFileTask3.bin";
 
-            double y = Math.Round(2 * Math.Pow(x, 3) + (1 / 2) * Math.Pow(x, 2) - 3.5 * x + 2, 3);
+            double y = Math.Round(2 * Math.Pow(x, 3) + (0.5) * Math.Pow(x, 2) - 3.5 * x + 2, 3);
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
